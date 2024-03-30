@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="./css/style.css">
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+    <title>Document</title>
+</head>
+<body class="bg-body">
+    <header class="max-w-screen-xl h-16 bg-navbar mx-auto lg:max-w-full lg:bg-black lg:h-20">
+        <div class="max-w-screen-xl flex justify-between items-center h-full lg:mx-auto">
+            <div class="w-40 flex items-center justify-evenly ml-4">
+                <img src="https://kampusmerdeka.kemdikbud.go.id/static/media/logo-pendidikan@2x.0ce0acdc.webp" alt="" class="w-10 leading-4">
+                <img src="https://kampusmerdeka.kemdikbud.go.id/static/media/logo-white.mobile@2x.2ef70552.webp" alt="Logo" class="w-20 leading-4 ml-3">
+            </div>
+            <div class="nav text-3xl cursor-pointer lg:hidden absolute right-0 z-40 text-white mr-4">
+                <ion-icon name="menu-outline" onclick="Menu(this)"></ion-icon>
+            </div>
+            
+            <div class="slide-navbar w-full top-0 lg:opacity-0 absolute pt-10 py-5 px-4 bg-white -translate-y-full transition duration-300">
+                <p class="text-abu py-5 text-sm">Program Kampus Merdeka</p>
+                <a href="">
+                    <div class="flex justify-between my-1">
+                        <h2 class="font-semibold text-base">Kampus Mengajar</h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short text-black" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                        </svg>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="flex justify-between my-4">
+                        <h2 class="font-semibold text-base">Magang MSIB</h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short text-black" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                        </svg>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="flex justify-between my-4">
+                        <h2 class="font-semibold text-base">Studi Independen Bersertifikat</h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short text-black" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                        </svg>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="flex justify-between my-4">
+                        <h2 class="font-semibold text-base">Pertukaran Mahasiswa Merdeka</h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short text-black" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                        </svg>
+                    </div>
+                </a>
+                <a href="">
+                    <div class="flex justify-between my-4">
+                        <h2 class="font-semibold text-base">Program dan Kegiatan Lainnya</h2>
+                        <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short text-black" viewBox="0 0 16 16">
+                            <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                        </svg>
+                    </div>
+                </a>
+            </div>
+            <div class="lg:flex justify-end w-full">
+                <div class="flex justify-evenly items-center w-7/12 lg:opacity-100 opacity-0">
+                    <ul>
+                        <li><a href="" class="font-bold text-white text-lg flex">Beranda</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="" class="font-bold text-white text-lg flex">Program</a></li>
+                    </ul>
+                    <ul>
+                        <li><a href="" class="font-bold text-white text-lg flex">Butuh Bantuan?</a></li>
+                    </ul>
+                    <ul>
+                        <li><button class="border rounded-full flex bg-white text-black font-bold py-3 px-3 lg:w-full justify-evenly items-center">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-person-fill text-slate-400 mr-5" viewBox="0 0 16 16">
+                                <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                              </svg>
+                            Masuk ke Akun
+                        </button></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <!-- overlay -->
+    <div class="overlay bg-gelap z-20 w-[100%] h-[100%] fixed top-0 left-0 hidden"></div>
+    <!-- overlay -->
+
+    <div class="max-w-screen-xl hidden lg:flex mx-auto px-5">
+        <div class="flex justify-between items-center w-44 p-3 py-0 mt-3 group hover:bg-zinc-200 cursor-pointer">
+            <h1 class="text-xl font-bold w-5 group-hover:text-biru">
+                Kampus Mengajar
+            </h1>
+            <i class='fa fa-chevron-down group-hover:text-biru'></i>
+        </div>
+        <div class="flex justify-between items-center w-52 p-3 mt-3 group hover:bg-zinc-200 cursor-pointer">
+            <h1 class="text-xl font-bold group-hover:text-biru">
+                Magang MSIB
+            </h1>
+            <i class='fa fa-chevron-down group-hover:text-biru'></i>
+        </div>
+        <div class="flex justify-between items-center w-1/5 p-3 group hover:bg-zinc-200 cursor-pointer">
+            <h1 class="text-xl font-bold w-fit group-hover:text-biru">
+                Studi Independen Bersertifikat
+            </h1>
+            <i class='fa fa-chevron-down group-hover:text-biru'></i>
+        </div>
+        <div class="flex justify-between items-center w-72 p-3 group hover:bg-zinc-200 cursor-pointer">
+            <div class="text-xl font-bold w-52 group-hover:text-biru">
+                Pertukaran Mahasiswa Merdeka
+            </div>
+            <i class='fa fa-chevron-down w-13 px-2 group-hover:text-biru'></i>
+        </div>
+        <div class="flex justify-between items-center w-1/5 p-5 group hover:bg-zinc-200 cursor-pointer">
+            <div class="text-xl font-bold w-52 group-hover:text-biru">
+                Program dan Kegiatan Lainnya
+            </div>
+        </div>
+    </div>
+
+    <div class="max-w-screen-xl mx-auto my-10 lg:mx-auto lg:px-5 selection:bg-[#b3d4fc]">
+        <h1 class="font-bold px-4 text-3xl mx-auto lg:text-5xl my-4">Program Kampus Merdeka</h1>
+        <div class="container px-4 pt-3 mx-auto lg:flex lg:flex-wrap lg:gap-4 max-w-screen-xl lg:mx-auto">
+            <!-- card 1 -->
+            <div class="rounded-2xl drop-shadow-lg overflow-hidden mb-4 bg-white px-2 lg:w-96 lg:mb-0 lg:px-4">
+                <img src="https://kampusmerdeka.kemdikbud.go.id/static/media/kampus-mengajar-logo-mobile.98a95818.webp" alt="kampus-mengajar-logo-mobile" class="px-2 py-3 lg:hidden">
+                <img src="https://kampusmerdeka.kemdikbud.go.id/static/media/kampus-mengajar-logo@2x.7822f1d5.webp" alt="kampus-mengajar-logo" class="lg:mx-auto lg:pt-8 lg:px-2 lg:flex hidden">
+                <div class="py-2 px-2 lg:mt-2">
+                    <h2 class="text-lg font-bold lg:text-2xl lg:mb-1">Kampus Mengajar</h2>
+                    <p class="font-sans text-zinc-600">Bantu peningkatan kualitas pendidikan dasar dengan terlibat langsung  pada proses pengajaran di sekolah-sekolah yang berlokasi di seluruh daerah di Indonesia.</p>
+                </div>
+                <div class="pt-14 lg:pt-10 px-2">
+                    <hr class="border-t-2 lg:border-t-[1px] lg:w-3/4 bg-slate-800 ">
+                    <a href="">
+                        <div class="flex justify-between">
+                            <h2 class="text-biru font-semibold py-3">Tentang Program</h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short text-biru my-3" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                              </svg>
+                        </div>
+                    </a>
+                    <hr class="border-t-[1px] lg:border-t-2 bg-slate-500">
+                    <a href="">
+                        <div class="flex justify-between">
+                            <h2 class="text-biru font-semibold py-3 mb-3">Syarat dan Ketentuan</h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short text-biru my-3" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                            </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- card 2 -->
+            <div class="rounded-2xl drop-shadow-lg overflow-hidden mb-4 bg-white px-2 lg:w-96 lg:mb-0 lg:px-4">
+                <img src="https://kampusmerdeka.kemdikbud.go.id/static/media/msib-logo-mobile.da2d26a6.webp" alt="Msib" class="px-2 py-3 lg:hidden">
+                <img src="https://kampusmerdeka.kemdikbud.go.id/static/media/msib-logo@2x.e1ad4cf6.webp" alt="Msib-logo" class="lg:mx-auto lg:pt-8 lg:px-2 lg:flex hidden">
+                <div class="py-2 px-2 lg:mt-2">
+                    <h2 class="text-lg font-bold lg:text-2xl lg:mb-1">Magang MSIB</h2>
+                    <p class="font-sans text-zinc-600">Dapatkan pengalaman dunia kerja secara langsung sebagai persiapan kariermu.</p>
+                </div>
+                <div class="pt-3 px-2">
+                    <button class="py-2 block w-full rounded-2xl border border-black hover:bg-slate-50 bg-cover mb-6 font-semibold">Cari Posisi Magang</button>
+                    <hr class="border-t-2 bg-slate-800 lg:hidden">
+                    <a href="">
+                        <div class="flex justify-between lg:pt-3">
+                            <h2 class="text-biru font-semibold py-3">Tentang Program</h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short text-biru my-3" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                              </svg>
+                        </div>
+                    </a>
+                    <hr class="border-t-1 lg:border-t-2 bg-slate-500">
+                    <a href="">
+                        <div class="flex justify-between">
+                            <h2 class="text-biru font-semibold py-3 mb-3">Syarat dan Ketentuan</h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short text-biru my-3" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                              </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- card 3 -->
+            <div class="rounded-2xl drop-shadow-lg overflow-hidden mb-4 bg-white px-2 lg:w-96 lg:mb-0 lg:px-4">
+                <img src="https://kampusmerdeka.kemdikbud.go.id/static/media/msib-logo-mobile.da2d26a6.webp" alt="Msib" class="px-2 py-3 lg:hidden">
+                <img src="https://kampusmerdeka.kemdikbud.go.id/static/media/msib-logo@2x.e1ad4cf6.webp" alt="Msib-logo" class="lg:mx-auto lg:pt-8 lg:px-2 lg:flex hidden">
+                <div class="py-2 px-2 lg:mt-2">
+                    <h2 class="text-lg font-bold lg:text-2xl lg:mb-1">Studi Independen </h2>
+                    <p class="font-sans text-zinc-600">Jalankan proyek penelitian dengan studi kasus nyata dari para pelaku industri ternama.</p>
+                </div>
+                <div class="pt-3 px-2">
+                    <button class="py-2 block w-full rounded-2xl border border-black hover:bg-slate-50 bg-cover mb-6 font-semibold">Cari Kelas Studi Independen</button>
+                    <hr class="border-t-2 bg-slate-800 lg:hidden">
+                    <a href="">
+                        <div class="flex justify-between lg:pt-3">
+                            <h2 class="text-biru font-semibold py-3">Tentang Program</h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short text-biru my-3" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                              </svg>
+                        </div>
+                    </a>
+                    <hr class="border-t-1 lg:border-t-2 bg-slate-500">
+                    <a href="">
+                        <div class="flex justify-between">
+                            <h2 class="text-biru font-semibold py-3 mb-3">Syarat dan Ketentuan</h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short text-biru my-3" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                              </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- card 4 -->
+            <div class="rounded-2xl drop-shadow-lg overflow-hidden mb-4 bg-white px-2 lg:w-96 lg:px-4 lg:h-fit">
+                <img src="https://kampusmerdeka.kemdikbud.go.id/static/media/pmm-logo-mobile.bfc99302.webp" alt="Pmm" class="px-2 py-3 lg:hidden">
+                <img src="https://kampusmerdeka.kemdikbud.go.id/static/media/pmm-logo@2x.9509faf6.webp" alt="" class="lg:mx-auto lg:pt-8 lg:px-2 lg:flex hidden">
+                <div class="py-2 px-2 lg:mt-4">
+                    <h2 class="text-lg font-bold lg:text-2xl lg:mb-1">Pertukaran Mahasiswa Merdeka </h2>
+                    <p class="font-sans text-zinc-600">Program pertukaran mahasiswa dalam negeri  yang memberikan pengalaman langsung untuk lebih memaknai keberagaman budaya nusantara.</p>
+                </div>
+                <div class="pt-14 px-2 lg:pt-1">
+                    <hr class="border-t-2 bg-slate-800 lg:border-t-[1px] lg:w-3/4">
+                    <a href="">
+                        <div class="flex justify-between">
+                            <h2 class="text-biru font-semibold py-3">Tentang Program</h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short text-biru my-3" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                              </svg>
+                        </div>
+                    </a>
+                    <hr class="border-t-[1px] lg:border-t-2 bg-slate-500">
+                    <a href="">
+                        <div class="flex justify-between">
+                            <h2 class="text-biru font-semibold py-3 mb-3 lg:mb-0">Syarat dan Ketentuan</h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short text-biru my-3" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                              </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- card 5 -->
+            <div class="rounded-2xl drop-shadow-lg overflow-hidden mb-4 bg-white px-2 lg:w-96 lg:mb-0 lg:px-4 lg:h-fit">
+                <img src="https://kampusmerdeka.kemdikbud.go.id/static/media/wmk-logo-mobile.03fc86ab.webp" alt="Wirausaha" class="px-2 py-3 lg:hidden">
+                <img src="https://kampusmerdeka.kemdikbud.go.id/static/media/wmk-logo@2x.6e167122.webp" alt="Wirausaha-logo" width="240" class="lg:mx-auto lg:pt-8 lg:px-2 lg:flex hidden">
+                <div class="py-2 px-2 lg:mt-4">
+                    <h2 class="text-lg font-bold lg:text-2xl lg:mb-1">Wirausaha Merdeka </h2>
+                    <p class="font-sans text-zinc-600">Ikuti program unggulan dari berbagai Perguruan Tinggi yang bertujuan untuk meningkatkan kemampuan wirausaha.</p>
+                </div>
+                <div class="mt-28 px-2">
+                    <hr class="border-t-2 bg-slate-800">
+                    <a href="">
+                        <div class="flex justify-between">
+                            <h2 class="text-biru font-semibold py-3">Tentang Program</h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short text-biru my-3" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                              </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- card 6 -->
+            <div class="rounded-2xl drop-shadow-lg overflow-hidden mb-4 bg-white px-2 lg:w-96 lg:mb-0 lg:px-4 lg:h-fit">
+                <img src="https://kampusmerdeka.kemdikbud.go.id/static/media/iisma-logo-mobile.e601a298.webp" alt="Iisma" class="px-2 py-3 lg:hidden">
+                <img src="https://kampusmerdeka.kemdikbud.go.id/static/media/iisma-logo@2x.41a490c7.webp" alt="iisma-logo" width="200" class="lg:mx-auto lg:pt-8 lg:px-2 lg:flex hidden">
+                <div class="py-2 px-2">
+                    <h2 class="text-lg font-bold lg:text-2xl lg:mb-1">Indonesian International Student Mobility Awards </h2>
+                    <p class="font-sans text-zinc-600">Program pertukaran dengan universitas lain dari seluruh dunia untuk bertukar budaya.</p>
+                </div>
+                <div class="mt-20 px-2 lg:mt-12">
+                    <hr class="border-t-2 bg-slate-800 lg:border-t-[1px] lg:w-3/4">
+                    <a href="">
+                        <div class="flex justify-between">
+                            <h2 class="text-biru font-semibold py-3">Tentang Program</h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short text-biru my-3" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                              </svg>
+                        </div>
+                    </a>
+                    <hr class="border-t-[1px] lg:border-t-2 bg-slate-500">
+                    <a href="">
+                        <div class="flex justify-between">
+                            <h2 class="text-biru font-semibold py-3 mb-3 lg:mb-0">Syarat dan Ketentuan</h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short text-biru my-3" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                              </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+            <!-- card 7 -->
+            <div class="rounded-2xl drop-shadow-lg overflow-hidden mb-4 bg-white px-2 lg:w-96 lg:mb-0 lg:px-4">
+                <img src="https://kampusmerdeka.kemdikbud.go.id/static/media/praktisi-mengajar-logo-mobile.7e3aae33.webp" alt="Praktisi" class="px-2 py-3 lg:hidden">
+                <img src="https://kampusmerdeka.kemdikbud.go.id/static/media/praktisi-mengajar-logo@2x.76ee529f.webp" alt="praktisi-mengajar-logo" width="200" class="lg:mx-auto lg:pt-8 lg:px-2 lg:flex hidden">
+                <div class="py-2 px-2">
+                    <h2 class="text-lg font-bold lg:text-2xl lg:mb-1">Praktisi Mengajar </h2>
+                    <p class="font-sans text-zinc-600">Ruang kolaborasi antara Praktisi sebagai representasi industri dengan dosen Perguruan Tinggi dalam bentuk pengajaran mata kuliah agar mahasiswa lebih siap untuk masuk ke dunia kerja.</p>
+                </div>
+                <div class="pt-24 px-2">
+                    <hr class="border-t-2 bg-slate-800">
+                    <a href="">
+                        <div class="flex justify-between">
+                            <h2 class="text-biru font-semibold py-3">Tentang Program</h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short text-biru my-3" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                              </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="container px-4 pt-3 mx-auto max-w-screen-xl lg:py-4 lg:mx-auto">
+            <hr class="mt-10 border-t-2 bg-slate-800">
+            <h1 class="font-bold mx-auto text-3xl my-5 lg:text-5xl">Kegiatan Lainnya</h1>
+            <div class="rounded-2xl drop-shadow-lg overflow-hidden my-10 pb-1 bg-white px-2 lg:w-96 lg:px-4">
+                <img src="https://kampusmerdeka.kemdikbud.go.id/static/media/logo-mandiri-mobile.4e08d727.webp" alt="Mandiri" width="120" class="px-2 py-3 lg:hidden">
+                <img src="https://kampusmerdeka.kemdikbud.go.id/static/media/logo-mandiri@2x.2a1d048b.webp" alt="Mandiri-logo" width="200" class="lg:mx-auto lg:pt-8 lg:px-2 lg:flex hidden">
+                <div class="py-2 px-2 lg:mt-7">
+                    <h2 class="text-lg font-bold lg:text-2xl lg:mb-1">Magang Mandiri</h2>
+                    <p class="font-sans text-zinc-600">Temukan pengalaman dunia kerja yang dikelola langsung oleh perusahaan tanpa ada batasan kuota dan jadwal yang lebih fleksibel.</p>
+                </div>
+                <div class="pt-3 px-2">
+                    <button class="py-2 block w-full rounded-2xl border border-black hover:bg-slate-50 bg-cover mb-[90px] font-semibold">Cari Posisi Magang</button>
+                    <hr class="border-t-2 bg-slate-800 lg:hidden mx-auto">
+                    <a href="">
+                        <div class="flex justify-between">
+                            <h2 class="text-biru font-semibold py-3">Tentang Kegiatan</h2>
+                            <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-arrow-right-short text-biru my-3" viewBox="0 0 16 16">
+                                <path fill-rule="evenodd" d="M4 8a.5.5 0 0 1 .5-.5h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5A.5.5 0 0 1 4 8"/>
+                              </svg>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="mb-[137px]"></div>
+    </div>
+
+    <!-- footer full screen -->
+    <div class="max-w-full bg-black">
+        <div class="max-w-screen-xl mx-auto bg-black lg:flex lg:flex-wrap hidden py-20 text-white text-lg px-14 selection:bg-[#b3d4fc]">
+            <div>
+                <img src="https://kampusmerdeka.kemdikbud.go.id/static/media/logo-kemendikbud@2x.8229b760.webp" alt="Logo-kemendikbud" width="120" height="120">
+            </div>
+            <div class="mx-6 flex flex-col justify-between h-96 w-[400px]">
+                <div class="flex flex-col">
+                    <p class="font-bold">Direktorat Jenderal Pendidikan Tinggi, Riset, dan Teknologi (Diktiristek)</p>
+                    <p class="mt-10">marketing@kampusmerdeka.co</p>
+                    <p class="mt-4">Jl. Jenderal Sudirman, Senayan, Jakarta 10270</p>
+                </div>
+            </div>
+            <div class="flex flex-col ml-24">
+                <p class="font-bold">Navigasi</p>
+                <a href="" class="mt-7">Beranda</a>
+                <a href="" class="mt-4">Tentang Kami</a>
+                <a href="" class="mt-4">Berita</a>
+                <a href="" class="mt-4">Pengumuman</a>
+                <a href="" class="mt-4">FAQ</a>
+                <a href="" class="mt-4">Program</a>
+                <a href="" class="mt-4">Daftar</a>
+            </div>
+            <div class="flex flex-col ml-28">
+                <p class="font-bold">Tautan Eksternal</p>
+                <a href="" class="mt-7">Mitra Kampus Merdeka</a>
+            </div>
+            <div class="mx-10 pl-5 flex gap-[265px] w-screen">
+                <div class="mt-2 flex text-2xl gap-5 ml-20">
+                    <a href=""><i class="fa fa-twitter"></i></a>
+                    <a href=""><i class="fa fa-instagram"></i></a>
+                    <a href=""><i class="fa fa-youtube-play"></i></a>
+                    <a href="" class="mt-1"><ion-icon name="logo-facebook"></ion-icon></a>
+                    <a href=""><i class="fa fa-linkedin-square"></i></a>
+                    <a href="" class="mt-1"><ion-icon name="globe-outline"></ion-icon></a>
+                </div> 
+                <div class="flex flex-col text-base ml-6">
+                    <p class="mb-2 w-full">Hak Cipta 2022 Kementerian Pendidikan dan Kebudayaan RI</p>
+                    <p>Foto oleh ITS, ITERA, and UI</p>
+                </div> 
+            </div>
+        </div>
+    </div>
+    <!-- footer small screen (android)-->
+    <div class="max-w-screen-xl mx-auto h-12 bg-white fixed bottom-0 right-0 left-0 z-10 lg:hidden">
+        <div class="flex justify-around items-center h-full">
+            <a href="">
+                <div class="flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0,0,256,256" width="24px" height="24px"><g fill="#94a3b8" fill-rule="nonzero" stroke="none" stroke-width="1" stroke-linecap="butt" stroke-linejoin="miter" stroke-miterlimit="10" stroke-dasharray="" stroke-dashoffset="0" font-family="none" font-weight="none" font-size="none" text-anchor="none" style="mix-blend-mode: normal"><g transform="scale(10.66667,10.66667)"><path d="M12,2.09961l-11,9.90039h3v9h6v-7h4v7h6v-9h3z"></path></g></g></svg>
+                    <p class="text-xs font-semibold">Beranda</p >
+                </div>
+            </a>
+            <a href="">
+                <div class="flex flex-col items-center">
+                    <i class="fa fa-briefcase text-footerIcon" style="font-size:20px"></i>
+                    <p class="text-xs font-semibold">Program</p >
+                </div>
+            </a>
+            <a href="">
+                <div class="flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-question-circle text-slate-400" viewBox="0 0 16 16">
+                        <path d="M8 15A7 7 0 1 1 8 1a7 7 0 0 1 0 14m0 1A8 8 0 1 0 8 0a8 8 0 0 0 0 16"/>
+                        <path d="M5.255 5.786a.237.237 0 0 0 .241.247h.825c.138 0 .248-.113.266-.25.09-.656.54-1.134 1.342-1.134.686 0 1.314.343 1.314 1.168 0 .635-.374.927-.965 1.371-.673.489-1.206 1.06-1.168 1.987l.003.217a.25.25 0 0 0 .25.246h.811a.25.25 0 0 0 .25-.25v-.105c0-.718.273-.927 1.01-1.486.609-.463 1.244-.977 1.244-2.056 0-1.511-1.276-2.241-2.673-2.241-1.267 0-2.655.59-2.75 2.286m1.557 5.763c0 .533.425.927 1.01.927.609 0 1.028-.394 1.028-.927 0-.552-.42-.94-1.029-.94-.584 0-1.009.388-1.009.94"/>
+                      </svg>
+                    <p class="text-xs font-semibold py-0 my-0">FAQ</p >
+                </div>
+            </a>
+            <a href="">
+                <div class="flex flex-col items-center">
+                    <svg xmlns="http://www.w3.org/2000/svg" width="23" height="23" fill="currentColor" class="bi bi-person-fill text-slate-400" viewBox="0 0 16 16">
+                        <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6"/>
+                      </svg>
+                    <p class="text-xs font-semibold py-0 my-0">Masuk</p >
+                </div>
+            </a>
+
+        </div>
+    </div>
+
+
+    <script src="script.js"></script>
+</body>
+</html>
